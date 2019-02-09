@@ -1,0 +1,23 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 250px auto 0;
+    padding: 20px;
+    background: #23201fb0;
+    border-radius: 10px;
+    align-items: center;
+    /*text-align: center;*/
+}
+
+.login input {
+    width: 100px;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: none;
+    background: #31b8d3a1;
+    border-radius: 4px;
+    margin-top: 20px;
+    color: snow;
+    font-size: 20px;
+}

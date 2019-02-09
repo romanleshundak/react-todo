@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    pading: 0;
+    color: snow;
+    background: url("https://images.unsplash.com/photo-1544247341-a0ab7d0955c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80") no-repeat center center fixed;
+    background-size: cover;
+    /*display: flex;*/
+    /*align-items: flex-end;*/
+    /*justify-content: flex-end;*/
+}
+.app {
+display: flex;
+align-items: flex-end;
+min-height: 800px
+/*justify-content: flex-end;*/
+/*align-items: flex-end;*/
+/*align-self: flex-end;*/
+}
+.main-content {
+    position: fixed;
+    /*margin-left: 78%;*/
+    /*top: 609px;*/
+    right: 18px;
+    /*justify-self: flex-end;*/
+}

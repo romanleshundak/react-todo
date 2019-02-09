@@ -1,0 +1,68 @@
+.todo-list {
+    /*width: 400px;*/
+    background: #23201fb0;
+    margin: 20px auto;
+    padding: 10px;
+    /*display: none;*/
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.todo-list h2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-list ul {
+    max-height: 150px;
+    /*overflow: auto;*/
+    overflow-y: auto;
+    /*overflow-scrolling: inherit;*/
+    /*overflow-scrolling: revert;*/
+padding: 0;
+}
+
+.todo-list li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-list p {
+    text-align: center;
+}
+
+::-webkit-scrollbar-button {
+    /*background-image:url('');*/
+    background-repeat:no-repeat;
+    width:7px;
+    height:0px
+}
+
+::-webkit-scrollbar-track {
+    background-color:#ecedee
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color:#487b4c;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color:#56999f;
+}
+
+::-webkit-resizer{
+    /*background-image:url('');*/
+    background-repeat:no-repeat;
+    width:4px;
+    height:0px
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
