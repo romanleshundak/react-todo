@@ -6,16 +6,13 @@ export default class Login extends Component{
         name: ""
     };
     getFormValue = (e) => {
-        console.log(this.state.name)
-        e.preventDefault()
+        e.preventDefault();
         this.props.getName(this.state.name)
 
     };
     inputChangeValue = (e) => {
         const name = e.target.value;
-        this.setState((state) => {
-            return {name}
-        })
+        this.setState({name})
     };
     render () {
         return (
