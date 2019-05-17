@@ -1,22 +1,20 @@
 .greeting input {
-    width: 300px;
+    width: 333px;
     font-size: 35px;
     color: snow;
-    /*padding: 6px 0 4px 10px;*/
-    /*border: 1px solid #cecece;*/
     background: none;
     border: none;
     cursor: pointer;
     border-bottom: 2px solid snow;
-    /*border-radius: 8px;*/
+}
+.greeting input:focus {
+    outline: none;
 }
 
+
 .greeting {
-    /*width: 50%;*/
     margin: 0 auto;
-    /*justify-self: center;*/
     text-align: center;
-    /*position: relative;*/
 
 }
 .greeting h2 {
@@ -31,7 +29,6 @@
 }
 .greeting p {
     font-size: 35px;
-    cursor: pointer;
 }
 .none {
     display: none;

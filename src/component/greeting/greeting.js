@@ -8,7 +8,6 @@ export default class Greeting extends Component {
         minute: new Date().getMinutes(),
         hours: new Date().getHours(),
         showTask: false,
-        question: "What is your main focus for today?"
     };
 
     componentDidMount() {
@@ -16,11 +15,13 @@ export default class Greeting extends Component {
             let date = new Date();
             let minute = date.getMinutes();
             let hours = date.getHours();
-            this.setState({
-                minute,
-                hours
-            })
-        }, 10000)
+            if (minute !== this.state.minute) {
+                this.setState({
+                    minute,
+                    hours
+                })
+            }
+        }, 1000)
     }
 
     changeValue = (e) => {
@@ -32,57 +33,38 @@ export default class Greeting extends Component {
         if (!this.state.inputValue) {
             return
         }
-        this.setState(({showTask}) => {
-            return {
-                showTask: !showTask,
-                question: "TODAY"
-            }
-        })
+        this.setState({showTask: !this.state.showTask})
 
     };
 
     changeTask = () => {
-        this.setState((state) => {
-            return {
-                showTask: !state.showTask,
-                question: "What is your main focus for today?"
-
-            }
-        })
+        this.setState({showTask: !this.state.showTask})
     };
 
 
     render() {
-        const {minute, hours, inputValue, showTask, question} = this.state;
-        let classNameTask = "";
-        let classNameForm = "";
-        let greeting = "Good ";
+        const {minute, hours, inputValue, showTask} = this.state;
+
+        let greeting = "";
         if (hours <= 5) {
-            greeting += "night"
+            greeting = "night"
         } else if (hours <= 11) {
-            greeting += "morning"
+            greeting = "morning"
         } else if (hours <= 18) {
-            greeting += "afternoon"
+            greeting = "afternoon"
         } else {
-            greeting += "evening"
+            greeting = "evening"
         }
-
-        if (!showTask) {
-            classNameTask += " none"
-        } else if (showTask) {
-            classNameForm += " none"
-        }
-
 
         return (
             <div className="greeting">
                 <h2>{`${hours} : ${minute}`}</h2>
-                <h3>{greeting}, {this.props.name}.</h3>
-                <p>{question}</p>
-                <form onSubmit={this.submit} className={classNameForm}>
+                <h3>{`Good  ${greeting}`}, {this.props.name}.</h3>
+                <p>{!showTask ? "What is your main focus for today?" : "Todo"}</p>
+                <form onSubmit={this.submit} className={showTask  ? "none" : ""}>
                     <input type="text" onChange={this.changeValue}  value={inputValue} />
                 </form>
-                <p className={classNameTask} onClick={this.changeTask}>{inputValue}</p>
+                <p className={!showTask ? "none" : ""} onClick={this.changeTask}>{inputValue}</p>
             </div>
         )
     }

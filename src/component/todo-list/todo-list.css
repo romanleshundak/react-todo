@@ -1,45 +1,80 @@
 .todo-list {
-    /*width: 400px;*/
     background: #23201fb0;
     margin: 20px auto;
     padding: 10px;
-    /*display: none;*/
     height: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
 
-
+.todo-list form {
+    display: flex;
+    justify-content: space-between;
 }
 
 .todo-list h2 {
+    margin: 5px;
     display: flex;
     justify-content: space-between;
 }
 
 .todo-list ul {
     max-height: 150px;
-    /*overflow: auto;*/
     overflow-y: auto;
-    /*overflow-scrolling: inherit;*/
-    /*overflow-scrolling: revert;*/
-padding: 0;
+    padding: 0;
 }
 
 .todo-list li {
     display: flex;
     justify-content: space-between;
 }
+.hideBtn {
+    border: none;
+    background: #31b8d3a1 ;
+    border-radius: 50%;
+    padding: 15px;
+    color: floralwhite;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+    min-height: 56px;
+    min-width: 93px;
+    margin-bottom: 18px;
+}
+.hideBtn:active, .hideBtn:focus {
+    outline: none;
+}
+.hideBtn:hover {
+    font-size: 22px;
+}
+
 
 .todo-list p {
+    font-size: 24px;
     text-align: center;
 }
 
+.addTask {
+    cursor: pointer;
+    border: none;
+    border-radius: 35%;
+    font-size: 16px;
+    text-align: center;
+    padding: 7px 7px;
+    background: #31b8d3a1;
+    color: snow;
+}
+
+.addTask:focus, .addTask:hover {
+    outline: none;
+    background: #31b8d3;
+}
+
 ::-webkit-scrollbar-button {
-    /*background-image:url('');*/
     background-repeat:no-repeat;
     width:7px;
-    height:0px
+    height:0;
 }
 
 ::-webkit-scrollbar-track {
@@ -47,8 +82,8 @@ padding: 0;
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
     background-color:#487b4c;
 }
 
@@ -57,10 +92,9 @@ padding: 0;
 }
 
 ::-webkit-resizer{
-    /*background-image:url('');*/
     background-repeat:no-repeat;
     width:4px;
-    height:0px
+    height:0;
 }
 
 ::-webkit-scrollbar{
