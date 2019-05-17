@@ -19,7 +19,7 @@ export default class Login extends Component{
             <form className="login" onSubmit={this.getFormValue}>
                 <label>Enter your name:</label>
                 <input type="text" onChange={this.inputChangeValue} value={this.state.value}/>
-                <input type="submit" value="login"/>
+                <button type="submit" className="login--btn">Login</button>
             </form>
         )
     }

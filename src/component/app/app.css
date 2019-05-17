@@ -1,23 +1,14 @@
 body {
     margin: 0;
-    pading: 0;
     color: snow;
     background: url("https://images.unsplash.com/photo-1544247341-a0ab7d0955c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80") no-repeat center center fixed;
     background-size: cover;
-    /*padding-bottom: 100px ;*/
 
-    /*display: flex;*/
-    /*align-items: flex-end;*/
-    /*justify-content: flex-end;*/
 }
 .app {
     display: flex;
     align-items: center;
     height: 100vh;
-
-/*justify-content: flex-end;*/
-/*align-items: flex-end;*/
-/*align-self: flex-end;*/
 }
 .main-content {
     align-self: flex-end;
@@ -25,12 +16,76 @@ body {
     flex-direction: column;
     align-items: flex-end;
     position: fixed;
-    /*margin-bottom: 100px;*/
-    /*margin-left: 78%;*/
-    /*top: 609px;*/
     right: 18px;
-    /*justify-self: flex-end;*/
 }
 .main-content p {
     font-size: 33px;
+}
+
+@media  (max-width: 1270px) {
+    .app {
+        align-items: flex-start;
+    }
+}
+
+@media  (max-width: 670px) {
+    .greeting h2 {
+        margin-top: 45px;
+        font-size: 100px;
+    }
+    .greeting h3 {
+        font-size: 40px;
+    }
+    .greeting p {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+}
+
+@media  (max-width: 500px) {
+    .greeting h2 {
+        margin-top: 10px;
+    }
+    .hideBtn {
+        display: none;
+    }
+    .hide {
+        display: none;
+    }
+    .main-content {
+        right: 55px;
+    }
+}
+
+@media (max-width: 400px) {
+    .greeting h2 {
+        margin-top: 44px;
+        font-size: 44px;
+    }
+    .greeting h3 {
+        font-size: 26px;
+    }
+    .greeting p {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .main-content {
+        right: 35px;
+    }
+
+}
+
+@media (max-width: 333px) {
+    .greeting input {
+        width: 280px;
+    }
+    .main-content {
+        right: 8px;
+    }
+    .login {
+        width: 290px;
+        margin: 135px auto 0;
+        padding: 41px 2px;
+    }
+
 }

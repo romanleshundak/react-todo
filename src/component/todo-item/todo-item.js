@@ -26,11 +26,11 @@ export default class TodoItem extends React.Component {
                 <input type="text" value={value}
                        onChange={this.changeValue}
                        onKeyPress={(e) => e.key === 'Enter' ? this.changeItem(itemId) : null}
-                       className={!show ? "none" : ""}
+                       className={!show ? "none" : "task-form"}
                 />
-                <span>
-                        <i className={show ? "far fa-save" : "fas fa-edit"} onClick={()=> this.changeItem(itemId)}></i>
-                        <i className="fas fa-trash-alt" onClick={() => this.props.deleteItem(itemId)}></i>
+                <span className="item-icons">
+                        <i className={show ? "far fa-save icon" : "fas fa-edit icon"} onClick={()=> this.changeItem(itemId)}></i>
+                        <i className="fas fa-trash-alt icon" onClick={() => this.props.deleteItem(itemId)}></i>
                 </span>
             </li>
         )

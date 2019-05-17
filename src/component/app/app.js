@@ -5,7 +5,6 @@ import './app.css'
 import TodoList from "../todo-list/todo-list";
 
 export default class App extends Component {
-    key = 99;
     state = {
         userName: "",
     };
@@ -15,19 +14,13 @@ export default class App extends Component {
     };
 
     render() {
-        const {userName, todoItems} = this.state;
+        const {userName} = this.state;
         return (
             !userName ? <Login getName={this.getName}/> :
             <div className="app">
                 <Greeting name={userName}/>
                 <div className="main-content">
-                    <TodoList todoItems={todoItems}
-                              addItem={this.addItem}
-                              deleteItem={this.deleteItem}
-                              changeItem={this.changeItem}
-                              showList={this.onShow}
-                    />
-                    <p>Todo</p>
+                    <TodoList/>
                 </div>
             </div>
         )

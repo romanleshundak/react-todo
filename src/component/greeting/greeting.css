@@ -1,5 +1,5 @@
 .greeting input {
-    width: 300px;
+    width: 333px;
     font-size: 35px;
     color: snow;
     background: none;
@@ -7,6 +7,10 @@
     cursor: pointer;
     border-bottom: 2px solid snow;
 }
+.greeting input:focus {
+    outline: none;
+}
+
 
 .greeting {
     margin: 0 auto;
@@ -25,7 +29,6 @@
 }
 .greeting p {
     font-size: 35px;
-    cursor: pointer;
 }
 .none {
     display: none;

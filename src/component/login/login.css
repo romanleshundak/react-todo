@@ -3,16 +3,15 @@
     flex-direction: column;
     width: 300px;
     margin: 250px auto 0;
-    padding: 20px;
+    padding: 40px 15px;
     background: #23201fb0;
     border-radius: 10px;
     align-items: center;
-    /*text-align: center;*/
+    box-shadow: 44px 37px 81px 0px rgba(35,32,31,0.7);
 }
 
 .login input {
-    width: 100px;
-    font-size: 13px;
+    width: 50%;
     padding: 6px 0 4px 10px;
     border: none;
     background: #31b8d3a1;
@@ -20,4 +19,28 @@
     margin-top: 20px;
     color: snow;
     font-size: 20px;
+}
+
+.login--btn {
+    margin-top: 20px;
+    min-height: 36px;
+    border: none;
+    cursor: pointer;
+    border-radius: 35%;
+    font-size: 16px;
+    text-align: center;
+    padding: 7px 30px;
+    background: #31b8d3a1;
+    color: snow;
+}
+
+ .login--btn:focus  {
+    outline: none;
+    background: dimgrey;
+
+}
+
+.login--btn:hover {
+    font-size: 18px;
+    box-shadow: 27px 15px 15px 0 rgba(35,32,31,0.65)
 }
